@@ -135,4 +135,31 @@ Now, time to go do the projects!
 
 ## Linux
 
-TBD.
+# Building and Running on Linux
+### Prerequisites
+Install the necessary dependencies:
+
+```bash 
+sudo apt update
+sudo apt install build-essential qemu qemu-system-x86 gcc gdb git
+```
+
+Now, obtain the Xv6 source code by cloning the repo:
+```sh
+$ git clone git@github.com:mit-pdos/xv6-public.git 
+$ cd xv6-public
+```
+Build the kernel:
+```bash
+make
+```
+
+Run Xv6 in QEMU:
+```bash
+make qemu
+```
+
+To run without a GUI:
+```bash
+make qemu-nox
+```
